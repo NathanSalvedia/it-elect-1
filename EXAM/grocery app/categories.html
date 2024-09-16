@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grocery List Categories</title>
+    <link rel="stylesheet" href="styles.css">
+
+
+    <link href="/css/categories.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>  
+</head>
+<body>
+
+    <div class="container">
+        <div class="button-container">
+            <button class="category-button" onclick="filterItems('Vegetables')">Vegetables</button>
+            <button class="category-button" onclick="filterItems('Meat')">Meat</button>
+            <button class="category-button" onclick="filterItems('Spices')">Spices</button>
+            <button class="category-button" onclick="filterItems('Fruits')">Fruits</button>
+            <button class="category-button" onclick="filterItems('Canned Goods')">Canned Goods</button>
+        </div>
+        <div id="item-list">
+            <!-- Items will be dynamically inserted here -->
+        </div>
+    </div>
+    <script src="/js/category.js"></script>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Grocery List</title>
+
+  <link href="/css/grocery.css" rel="stylesheet">
+  <link href="/css/reusable.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>  
+  
+<body>
+  
+   
+  <div class="container" >
+    <h1>Grocery List App</h1>
+    
+    <!-- Search Input -->
+    <input type="text" id="search" placeholder="Search items..." class="search-input">
+    
+    <button onclick="window.location.href='grocery.html'">Add More Items</button>
+  
+    <div class="filter-sort-container">
+      <select id="sort-by" class="filter-sort-select">
+          <option value="price-asc">Sort by Price (Low to High)</option>
+          <option value="price-desc">Sort by Price (High to Low)</option>
+          <option value="name-asc">Sort by Name (A to Z)</option>
+          <option value="name-desc">Sort by Name (Z to A)</option>
+      </select>
+      
+      <select id="filter-by-store" class="filter-sort-select">
+          <option value="">Filter by Store</option>
+          <!-- Options will be dynamically populated -->
+      </select>
+    </div>
+  
+    <!-- Form to Add Grocery Items -->
+    <form id="grocery">
+        <input type="text" id="product-name" placeholder="Product Name" required>
+        <input type="number" id="quantity" placeholder="Quantity" min="1" value="1" required>
+        <input type="number" id="price" placeholder="Price (₱)" step="0.01" required>
+        <input type="text" id="category" placeholder="Category (e.g., fruits)" required>
+        <input type="text" id="store" placeholder="Store" required>
+        <input type="text" id="weight" placeholder="Weight/Volume (e.g., 500g, 1kl)" required>
+        <input type="file" id="image" accept="image/*">
+        <button type="submit">Add Item</button>
+    </form>
+
+    
+
+    <!-- Grocery List Display -->
+    <div id="grocery-list" class="grocery-list"></div>   
+
+    
+  </div>
+  </div>
+  <script src="/js/grocery.js"></script>
+  <script src="/js/login.js"></script>
+  <script src="/js/category.js"></script>
+  <script src="/js/app.js"></script>
+</body>
+</html>

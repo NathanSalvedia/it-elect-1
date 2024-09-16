@@ -1,0 +1,259 @@
+@import url("https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Lora", sans-serif;
+  background-color: #ff8c6b;
+  color: #151111;
+  margin: 0;
+  padding: 20px;
+}
+
+/* Container Styles */
+.container {
+  max-width: 1200px;
+  width: 90%; 
+  margin: auto;
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Header Style */
+h1 {
+  text-align: center;
+  font-size: 2rem;
+  color: #151111;
+  margin-bottom: 20px;
+}
+
+/* Form Styling */
+form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+/* Input and Button Styles */
+input[type="text"],
+input[type="number"],
+input[type="file"],
+button {
+  width: calc(50% - 10px);
+  padding: 12px;
+  font-size: 16px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  transition: all 0.3s ease;
+  margin-bottom: 15px;
+}
+
+input[type="file"] {
+  padding: 0;
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus,
+input[type="file"]:focus {
+  outline: none;
+  border-color: #151111;
+}
+
+/* Full-width Button */
+button {
+  background-color: #151111;
+  color: #fff;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+  flex: 1;
+}
+
+button:hover {
+  background-color: #ffe0d2;
+  color: #151111;
+}
+
+
+
+/* Grocery List Grid Layout */
+.grocery-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+  padding-top: 20px;
+}
+
+/* Individual List Item Styles */
+.list-item {
+  background: #ffffff;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  transition: transform 0.3s;
+}
+
+/* Image Styling */
+.product-image {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  border: 2px solid #151111;
+}
+
+/* Item Hover Effect */
+.list-item:hover {
+  transform: translateY(-5px);
+}
+
+/* Edit and Delete Button Styles */
+button.edit-btn,
+button.delete-btn {
+  padding: 8px 20px;
+  font-size: 15px;
+  border-radius: 5px;
+  margin-top: 10px;
+  border: none;
+}
+
+.edit-btn {
+  background-color: #fab005;
+  color: #fff;
+}
+
+.delete-btn {
+  background-color: #d9534f;
+  color: #fff;
+}
+
+.edit-btn:hover {
+  background-color: #ec971f;
+  color: #151111;
+}
+
+.delete-btn:hover {
+  background-color: #c9302c;
+}
+/* Search Input Styling */
+.search-input {
+  padding: 12px;
+  font-size: 16px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  width: calc(100% - 24px);
+  margin-bottom: 20px;
+  transition: all 0.3s ease;
+}
+
+.search-input:focus {
+  outline: none;
+  border-color: #4a90e2;
+  box-shadow: 0 0 5px rgba(74, 144, 226, 0.3);
+}
+
+/* Filter and Sort Containers */
+.filter-sort-container {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* Select Input Styling */
+.filter-sort-select {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #ffffff;
+  color: #151111;
+  transition: border-color 0.3s ease;
+  cursor: pointer;
+  max-width: 250px;
+  width: 100%;
+}
+
+/* Hover and Focus States */
+.filter-sort-select:hover {
+  border-color: #151111;
+}
+
+.filter-sort-select:focus {
+  outline: none;
+  border-color: #4a90e2;
+  box-shadow: 0 0 5px rgba(74, 144, 226, 0.3);
+}
+
+.hidden {
+  display: none;
+}
+
+
+
+/* Responsive Adjustments */
+@media (max-width: 1200px) {
+  .container {
+    width: 95%;
+    padding: 20px; /* Adjust padding for smaller screens */
+  }
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .container {
+    width: 95%;
+    padding: 20px;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  .filter-sort-container {
+    flex-direction: column;
+  }
+
+  .filter-sort-select {
+    width: 100%;
+  }
+
+  form {
+    flex-direction: column;
+  }
+
+  input,
+  button {
+    flex: 1 1 100%;
+    margin-bottom: 10px; /* Add margin for better spacing */
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 15px;
+  }
+
+  .list-item {
+    padding: 10px;
+  }
+
+  button {
+    font-size: 14px;
+    padding: 10px;
+  }
+}
